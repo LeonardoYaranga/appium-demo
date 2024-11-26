@@ -1,10 +1,14 @@
 class LeftSideMenuScreen {
   get expandMenuButton() {
-    return $("~View menu");
+    return $('//android.widget.ImageView[@content-desc="View menu"]');
   }
 
   get loginMenuOption() {
-    return $('//*[@text="Log In"]');
+    return $('//android.widget.TextView[@content-desc="Login Menu Item"]');
+  }
+
+  get logoutButton(){
+    return $('//android.widget.TextView[@content-desc="Logout Menu Item"]');
   }
 }
 
