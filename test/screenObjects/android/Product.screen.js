@@ -5,7 +5,7 @@ class Product {
 
   get addtocartbutton() {
     return $(
-      'android=new UiSelector().resourceId("com.saucelabs.mydemoapp.android:id/cartBt")'
+      '//android.widget.Button[@content-desc="Tap to add product to cart"]'
     );
   }
   //add cuantity
@@ -13,7 +13,7 @@ class Product {
   //-android uiautomator: new UiSelector().resourceId("com.saucelabs.mydemoapp.android:id/plusIV")
   get addcuantity() {
     return $(
-      'android=new UiSelector().resourceId("com.saucelabs.mydemoapp.android:id/plusIV")'
+      '//android.widget.ImageView[@content-desc="Increase item quantity"]'
     );
   }
   //principalCounterProduct
@@ -21,7 +21,7 @@ class Product {
   //-android uiautomator: new UiSelector().resourceId("com.saucelabs.mydemoapp.android:id/noTV")
   get principalCounterProduct() {
     return $(
-      'android=new UiSelector().resourceId("com.saucelabs.mydemoapp.android:id/noTV")'
+      '//android.widget.TextView[@resource-id="com.saucelabs.mydemoapp.android:id/noTV"]'
     );
   }
 
@@ -30,7 +30,7 @@ class Product {
   //-android uiautomator: new UiSelector().resourceId("com.saucelabs.mydemoapp.android:id/cartTV")
   get cartCounter() {
     return $(
-      'android=new UiSelector().resourceId("com.saucelabs.mydemoapp.android:id/cartTV")'
+      '//android.widget.TextView[@resource-id="com.saucelabs.mydemoapp.android:id/cartTV"]'
     );
   }
 
@@ -38,4 +38,8 @@ class Product {
     await this.addtocartbutton.click();
     
   }
+
+
 }
+
+module.exports = new Product();
