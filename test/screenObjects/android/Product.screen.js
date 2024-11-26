@@ -11,7 +11,7 @@ class Product {
   //add cuantity
   //xpath: //android.widget.ImageView[@content-desc="Increase item quantity"]
   //-android uiautomator: new UiSelector().resourceId("com.saucelabs.mydemoapp.android:id/plusIV")
-  get addcuantity() {
+  get addCuantity() {
     return $(
       '//android.widget.ImageView[@content-desc="Increase item quantity"]'
     );
@@ -32,11 +32,6 @@ class Product {
     return $(
       '//android.widget.TextView[@resource-id="com.saucelabs.mydemoapp.android:id/cartTV"]'
     );
-  }
-
-  async addProduct() {
-    await this.addtocartbutton.click();
-    
   }
 
 
